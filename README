@@ -1,0 +1,9 @@
+== PHP PDO CLass File ==
+
+9/20/2010
+V: 1.0
+
+This is a basic PHP Class that uses PDO to connect to a MySQL database and it also has some helper methods for INSERTS, UPDATES, and SELECTS.
+
+
+- Wrenbjor
