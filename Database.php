@@ -18,7 +18,7 @@ class DB
 	/*** database resource ***/
 	public $dbh = NULL; // Database handler
 	
-	public function __constructor() // Default Constructor
+	public function __construct() // Default Constructor
 	{
 		try
 		{
@@ -32,7 +32,7 @@ class DB
 		}
 	}
 	
-	public function __destructor()
+	public function __destruct()
 	{
 		$this->dbh = NULL; // Setting the handler to NULL closes the connection propperly
 	}
