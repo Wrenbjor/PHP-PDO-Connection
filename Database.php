@@ -4,20 +4,20 @@ class DB
 {
 	/*** mysql hostname ***/
 	private $hostname = 'localhost'; // Put your host name here
-	
+
 	/*** mysql username ***/
 	private $username = 'username'; // Put your MySQL User name here
-	
+
 	/*** mysql password ***/
 	private $password = 'password'; // Put Your MySQL Password here
-	
+
 	/*** mysql password ***/
 	private $dbName = 'db'; // Put Your MySQL Database name here
-	
-	
+
+
 	/*** database resource ***/
 	public $dbh = NULL; // Database handler
-	
+
 	public function __construct() // Default Constructor
 	{
 		try
@@ -31,12 +31,12 @@ class DB
 			echo __LINE__.$e->getMessage();
 		}
 	}
-	
+
 	public function __destruct()
 	{
 		$this->dbh = NULL; // Setting the handler to NULL closes the connection propperly
 	}
-	
+
 	public function runQuery($sql)
 	{
 		try
@@ -53,11 +53,11 @@ class DB
 	public function getQuery($sql)
 	{
 		$stmt = $this->dbh->query($sql);
-	
+
 	    $stmt->setFetchMode(PDO::FETCH_ASSOC);
-		
+
 		return $stmt; // Returns an associative array that can be diectly accessed or looped through with While or Foreach
 	}
-	
+
 }
 ?>
